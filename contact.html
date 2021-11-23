@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Krishna S Raju</title>
+        <link rel="stylesheet"   type="text/css" media="screen" href="style.css">
+        
+	</head>
+        <body>
+   
+        
+        <nav>
+            <div class="logo">
+                <a href="index.html"><h4>Krishna S Raju</h4></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html"  class="activePage">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+
+        <div id="contactPage">
+
+            <div class="contactLeft">
+                <h2> GET IN TOUCH! </h2>
+
+                <p> I love feedback, we all love feedbacks. Tell me how the website is and the work in my portfolio. </p>
+
+                <a href="https://www.behance.net/krishnasraju" target="_blank" title="Behance Page"><img src="images/icons_be_Black.png" alt="Behance Icon White">&nbsp;/krishnasraju </a>
+
+                <a href="https://www.facebook.com/krishnaSraju/" target="_blank" title="Facebook Page"> <img src="images/icons_fb_Black.png" alt="FB icon white"> &nbsp;/krishnaSraju </a>
+
+                <a href="https://www.instagram.com/krishnasraju/" target="_blank" title="Instagram Page"> <img src="images/icons_insta_Black.png"> &nbsp;/krishnasraju</a>
+
+                
+                <a href="https://www.linkedin.com/in/krishnasraju/" target="_blank" title="LinkedIn Page"> <img src="images/icons_in_Black.png"> &nbsp;/krishnasraju</a>
+
+                <a href="https://www.strava.com/athletes/krishnasraju" target="_blank" title="Strava Page"> <img src="images/icons_strava_Black.png"> &nbsp;/krishnasraju</a>
+
+                <a href="tel:+919901068088" target="_blank""> <img src="images/icons_whatsapp_Black.png"> &nbsp;990 106 8088</a>
+
+            </div>
+
+            <div class="contactRight">
+
+                <div class="form">
+                    <div class="input-container ic1">
+                      <input id="name" class="input" type="text" placeholder=" " />
+                      <div class="cut"></div>
+                      <label for="firstname" class="placeholder">Name</label>
+                    </div>
+                    <div class="input-container ic1">
+                      <input id="email" class="input" type="text" placeholder=" " />
+                      <div class="cut"></div>
+                      <label for="lastname" class="placeholder">Email</label>
+                    </div>
+                    <div class="input-container ic1">
+                        <input id="phonenumber" class="input" type="number" placeholder=" " />
+                        <div class="cut"></div>
+                        <label for="lastname" class="placeholder">Phone Number</label>
+                      </div>
+                    <div class="input-container ic1 ">
+                      <input id="message" class="input messageTextBox" type="text" placeholder=" " />
+                      <div class="cut"></div>
+                      <label for="message" class="placeholder ">Message</label>
+                    </div>
+                    <button type="text" class="submit">submit</button>
+                  </div>
+
+            </div>
+
+
+        </div>
+        
+            <footer>
+                
+                <span>
+                    <a href="https://www.behance.net/krishnasraju" target="_blank" title="Behance Page"><img src="images/icons_be_White.png" alt="Behance Icon White"> </a>
+                </span>
+                <span>
+                    <a href="https://www.facebook.com/krishnaSraju/" target="_blank" title="Facebook Page"> <img src="images/icons_fb_white.png" alt="FB icon white"> </a>
+                </span>
+                <span>
+                    <a href="https://www.instagram.com/krishnasraju/" target="_blank" title="Instagram Page"> <img src="images/icons_insta_White.png"> </a>
+                </span>
+                <span>
+                    <a href="https://www.linkedin.com/in/krishnasraju/" target="_blank" title="LinkedIn Page"> <img src="images/icons_in_White.png"> </a>
+                </span>
+                <span>
+                    <a href="https://www.strava.com/athletes/krishnasraju" target="_blank" title="Strava Page"> <img src="images/icons_strava_White.png"> </a>
+                </span>
+                <span class="popupPhone" onclick="myFunctionDisplayPhone()">
+                    <img src="images/icons_whatsapp_White.png">
+                    <span class="popuptext" id="myPopup">
+                        <a href="tel:+919901068088" target="_blank""> +91 990 106 8088</a>
+                    </span>
+                 </span>
+                </span>
+                <p>&copy; Krishna S Raju</p>
+            </footer>
+
+            <script>
+                function navSlide() {
+                    const burger = document.querySelector(".burger");
+                    const nav = document.querySelector(".nav-links");
+                    const navLinks = document.querySelectorAll(".nav-links li");
+    
+                    burger.addEventListener("click", () => {
+                        //Toggle Nav
+                        nav.classList.toggle("nav-active");
+        
+                        //Animate Links
+                        navLinks.forEach((link, index) => {
+                        if (link.style.animation) {
+                            link.style.animation = ""
+                        } else {
+                            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                        }
+                        });
+                //Burger Animation
+                burger.classList.toggle("toggle");
+                });
+    
+                }
+
+                navSlide();
+
+                // for phone number
+
+                function myFunctionDisplayPhone() {
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show");
+                }
+            </script>
+
+    </body>
+    
+</html>
